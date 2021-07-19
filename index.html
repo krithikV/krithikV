@@ -1,0 +1,322 @@
+<html>
+
+<head>
+</head>
+<style>
+    /* GLOBAL STYLES */
+    body {
+        background: #333;
+        padding-top: 5em;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .container{
+    flex-direction: "row | row-reverse | column | column-reverse;"
+
+    }
+
+    .box div {
+        background-color: rgb(190, 196, 197);
+    }
+
+    /* DEMO-SPECIFIC STYLES */
+    .typewriter h1 {
+        color: #fff;
+        font-family: monospace;
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation:
+            typing 3.5s steps(30, end),
+            blink-caret .5s step-end infinite;
+    }
+
+    .aligh h2 {
+        text-align: center;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 100%
+        }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+
+        from,
+        to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: oranges
+        }
+    }
+    * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.container-width{
+  width:105%;
+  max-width:1150px;
+  margin:0 auto;
+}
+.flex-sect{
+  padding:100px 0;
+  font-family:Helvetica, serif;
+}
+.cards{
+  padding:20px 0;
+  display:flex;
+  justify-content:space-around;
+  flex-flow:wrap;
+}
+.card{
+  background-color:white;
+  height:300px;
+  width:300px;
+  margin-bottom:30px;
+  box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius:20px;
+  transition:all 0.5s ease;
+  font-weight:100;
+  overflow:hidden;
+}
+.card:hover{
+  margin-top:-5px;
+  box-shadow:0 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.card-header{
+  height:155px;
+  background-image:url("https://placehold.it/350x250/78c5d6/fff/image1.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.card-header.ch2{
+  background-image:url("https://placehold.it/350x250/459ba8/fff/image2.jpg");
+}
+.card-header.ch3{
+  background-image:url("https://placehold.it/350x250/79c267/fff/image3.jpg");
+}
+.card-header.ch4{
+  background-image:url("https://placehold.it/350x250/c5d647/fff/image4.jpg");
+}
+.card-header.ch5{
+  background-image:url("https://placehold.it/350x250/f28c33/fff/image5.jpg");
+}
+.card-header.ch6{
+  background-image:url("https://placehold.it/350x250/e868a2/fff/image6.jpg");
+}
+.card-body{
+  padding:15px 15px 5px 15px;
+  color:#555;
+}
+.card-title{
+  font-size:1.4em;
+  margin-bottom:5px;
+}
+.card-desc{
+  font-size:0.85rem;
+  line-height:17px;
+}
+#icr5c{
+  justify-content:center;
+  align-self:center;
+  display:flex;
+}
+#i2ma4x{
+  color:black;
+  width:156px;
+  justify-content:center;
+  flex-direction:row;
+  display:flex;
+}
+#i7avp{
+  text-align:center;
+  height:50px;
+}
+#ia4et{
+  font-size:50px;
+  height:50px;
+}
+#iorr{
+  text-align:center;
+}
+#im2feh{
+  color:black;
+  width:156px;
+  justify-content:center;
+  flex-direction:row;
+  display:flex;
+}
+#i3320h{
+  justify-content:center;
+  align-self:center;
+  display:flex;
+}
+#iz2zew{
+  text-align:center;
+  height:50px;
+}
+#ill109{
+  font-size:50px;
+  height:50px;
+}
+#icox3f{
+  text-align:center;
+}
+#imzffj{
+  color:black;
+  width:156px;
+  justify-content:center;
+  flex-direction:row;
+  display:flex;
+}
+#i56c37{
+  justify-content:center;
+  align-self:center;
+  display:flex;
+}
+#iuulyv{
+  text-align:center;
+  height:50px;
+}
+#i9tutu{
+  font-size:50px;
+  height:50px;
+}
+#is0y4p{
+  text-align:center;
+}
+
+
+</style>
+<script>
+    
+    var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+
+<body>
+    <div class="typewriter">
+        <h1>Krithik Vijayakumar</h1>
+        <h2>
+            <a class="typewrite" data-period="2000"
+                style="color:rgb(255, 255, 255);font-family: monospace;text-decoration:none"
+                data-type='[ "🤵 Entreprenuer", "YouTuber", "Web Developer", "App Developer","Robotics Trainer" ]'>
+                <span class="wrap"></span>
+            </a>
+        </h2>
+        <section class="flex-sect" id="ibze">
+            <div class="container-width">
+              <div class="cards" id="i2zl">
+                <div class="card" id="iorr">
+                  <div id="icr5c" class="card-header">
+                    <img id="i2ma4x" src="https://image.flaticon.com/icons/png/512/25/25231.png"/>
+                  </div>
+                  <div id="ixtok" class="card-body">
+                    <div class="card-title" id="i7avp">Github Projects
+                    </div>
+                    <div class="card-desc" id="ia4et">20+
+                    </div>
+                  </div>
+                </div>
+                <div class="card" id="is0y4p">
+                  <div class="card-header" id="i56c37">
+                    <img src="https://freepngimg.com/thumb/winner_ribbon/9-2-winner-ribbon-download-png.png" id="imzffj"/>
+                  </div>
+                  <div class="card-body" id="i64b5c">
+                    <div class="card-title" id="iuulyv">Awards & Honours
+                    </div>
+                    <div class="card-desc" id="i9tutu">40+
+                    </div>
+                  </div>
+                </div>
+                <div class="card" id="icox3f">
+                  <div class="card-header" id="i3320h">
+                    <img src="https://lh3.googleusercontent.com/proxy/uKBXLVLut23NQVf8iGQcJKAC-0IkyJBoPZYFspOS69TnEaN2bIK1XWLb5yR3BaxvAK3X3oNx9L4j5xcOh6FOphOhGH-NRDBiORNznhoJPSOuiL75Ujzmnm4HFjJLQih_pqJBrLYWmagMhtQj6p626a2X70_pMzyJ" id="im2feh"/>
+                  </div>
+                  <div class="card-body" id="i0cvem">
+                    <div class="card-title" id="iz2zew">Students Trained
+                    </div>
+                    <div class="card-desc" id="ill109"> 300+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+</body>
+
+</html>
