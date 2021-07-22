@@ -1,615 +1,964 @@
 <html>
 
 <head>
+  <title>Krithik V</title>
+  <link rel="icon"
+    href="https://firebasestorage.googleapis.com/v0/b/cloud-plus-e08d9.appspot.com/o/WhatsApp%20Image%202021-07-11%20at%206.09.05%20PM.jpeg?alt=media&token=87cef833-cc9d-48ad-acdb-e64ee234ca89"
+    type="image/jpg" sizes="16x16">
 </head>
 <style>
-    /* GLOBAL STYLES */
-    body {
-        background: #333;
-        padding-top: 5em;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-    }
+  /* GLOBAL STYLES */
+  body {
+    background: #333;
+    padding-top: 5em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
 
-    .container{
+  .container {
     flex-direction: "row | row-reverse | column | column-reverse;"
 
+  }
+
+  .box div {
+    background-color: rgb(190, 196, 197);
+  }
+
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  .aligh h2 {
+    text-align: center;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0
     }
 
-    .box div {
-        background-color: rgb(190, 196, 197);
+    to {
+      width: 100%
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+
+    from,
+    to {
+      border-color: transparent
     }
 
-    /* DEMO-SPECIFIC STYLES */
-    .typewriter h1 {
-        color: #fff;
-        font-family: monospace;
-        overflow: hidden;
-        /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid orange;
-        /* The typwriter cursor */
-        white-space: nowrap;
-        /* Keeps the content on a single line */
-        margin: 0 auto;
-        /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em;
-        /* Adjust as needed */
-        animation:
-            typing 3.5s steps(30, end),
-            blink-caret .5s step-end infinite;
+    50% {
+      border-color: oranges
     }
+  }
 
-    .aligh h2 {
-        text-align: center;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    /* The typing effect */
-    @keyframes typing {
-        from {
-            width: 0
-        }
+  body {
+    margin: 0;
+  }
 
-        to {
-            width: 100%
-        }
-    }
+  .container-width {
+    width: 105%;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
 
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
+  .flex-sect {
+    padding: 100px 0;
+    font-family: Helvetica, serif;
+  }
 
-        from,
-        to {
-            border-color: transparent
-        }
+  .cards {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+  }
 
-        50% {
-            border-color: oranges
-        }
-    }
-    * {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-}
-.container-width{
-  width:105%;
-  max-width:1150px;
-  margin:0 auto;
-}
-.flex-sect{
-  padding:100px 0;
-  font-family:Helvetica, serif;
-}
-.cards{
-  padding:20px 0;
-  display:flex;
-  justify-content:space-around;
-  flex-flow:wrap;
-}
-.card{
-  background-color:white;
-  height:300px;
-  width:300px;
-  margin-bottom:30px;
-  box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  border-radius:20px;
-  transition:all 0.5s ease;
-  font-weight:100;
-  overflow:hidden;
-}
-.card:hover{
-  margin-top:-5px;
-  box-shadow:0 20px 30px 0 rgba(0, 0, 0, 0.2);
-}
-.card-header{
-  height:155px;
-  background-image:url("https://placehold.it/350x250/78c5d6/fff/image1.jpg");
-  background-size:cover;
-  background-position:center center;
-}
-.card-header.ch2{
-  background-image:url("https://placehold.it/350x250/459ba8/fff/image2.jpg");
-}
-.card-header.ch3{
-  background-image:url("https://placehold.it/350x250/79c267/fff/image3.jpg");
-}
-.card-header.ch4{
-  background-image:url("https://placehold.it/350x250/c5d647/fff/image4.jpg");
-}
-.card-header.ch5{
-  background-image:url("https://placehold.it/350x250/f28c33/fff/image5.jpg");
-}
-.card-header.ch6{
-  background-image:url("https://placehold.it/350x250/e868a2/fff/image6.jpg");
-}
-.card-body{
-  padding:15px 15px 5px 15px;
-  color:#555;
-}
-.card-title{
-  font-size:1.4em;
-  margin-bottom:5px;
-}
-.card-desc{
-  font-size:0.85rem;
-  line-height:17px;
-}
-#icr5c{
-  justify-content:center;
-  align-self:center;
-  display:flex;
-}
-#i2ma4x{
-  color:black;
-  width:156px;
-  justify-content:center;
-  flex-direction:row;
-  display:flex;
-}
-#i7avp{
-  text-align:center;
-  height:50px;
-}
-#ia4et{
-  font-size:50px;
-  height:50px;
-}
-#iorr{
-  text-align:center;
-}
-#im2feh{
-  color:black;
-  width:156px;
-  justify-content:center;
-  flex-direction:row;
-  display:flex;
-}
-#i3320h{
-  justify-content:center;
-  align-self:center;
-  display:flex;
-}
-#iz2zew{
-  text-align:center;
-  height:50px;
-}
-#ill109{
-  font-size:50px;
-  height:50px;
-}
-#icox3f{
-  text-align:center;
-}
-#imzffj{
-  color:black;
-  width:156px;
-  justify-content:center;
-  flex-direction:row;
-  display:flex;
-}
-#i56c37{
-  justify-content:center;
-  align-self:center;
-  display:flex;
-}
-#iuulyv{
-  text-align:center;
-  height:50px;
-}
-#i9tutu{
-  font-size:50px;
-  height:50px;
-}
-#is0y4p{
-  text-align:center;
-}
+  .card {
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    font-weight: 100;
+    overflow: hidden;
+  }
 
+  .card:hover {
+    margin-top: -5px;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+  }
 
+  .card-header {
+    height: 155px;
+    background-image: url("https://placehold.it/350x250/78c5d6/fff/image1.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-header.ch2 {
+    background-image: url("https://placehold.it/350x250/459ba8/fff/image2.jpg");
+  }
+
+  .card-header.ch3 {
+    background-image: url("https://placehold.it/350x250/79c267/fff/image3.jpg");
+  }
+
+  .card-header.ch4 {
+    background-image: url("https://placehold.it/350x250/c5d647/fff/image4.jpg");
+  }
+
+  .card-header.ch5 {
+    background-image: url("https://placehold.it/350x250/f28c33/fff/image5.jpg");
+  }
+
+  .card-header.ch6 {
+    background-image: url("https://placehold.it/350x250/e868a2/fff/image6.jpg");
+  }
+
+  .card-body {
+    padding: 15px 15px 5px 15px;
+    color: #555;
+  }
+
+  .card-title {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+  }
+
+  .card-desc {
+    font-size: 0.85rem;
+    line-height: 17px;
+  }
+
+  #icr5c {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+  }
+
+  #i2ma4x {
+    color: black;
+    width: 156px;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+  }
+
+  #i7avp {
+    text-align: center;
+    height: 50px;
+  }
+
+  #ia4et {
+    font-size: 50px;
+    height: 50px;
+  }
+
+  #iorr {
+    text-align: center;
+  }
+
+  #im2feh {
+    color: black;
+    width: 156px;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+  }
+
+  #i3320h {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+  }
+
+  #iz2zew {
+    text-align: center;
+    height: 50px;
+  }
+
+  #ill109 {
+    font-size: 50px;
+    height: 50px;
+  }
+
+  #icox3f {
+    text-align: center;
+  }
+
+  #imzffj {
+    color: black;
+    width: 156px;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+  }
+
+  #i56c37 {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+  }
+
+  #iuulyv {
+    text-align: center;
+    height: 50px;
+  }
+
+  #i9tutu {
+    font-size: 50px;
+    height: 50px;
+  }
+
+  #is0y4p {
+    text-align: center;
+  }
 </style>
 <script>
-    
-    var TxtType = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
 
-    TxtType.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+  var TxtType = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
 
-        if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+  TxtType.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
 
-        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-        if (this.isDeleting) { delta /= 2; }
+    var that = this;
+    var delta = 200 - Math.random() * 100;
 
-        if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-        }
+    if (this.isDeleting) { delta /= 2; }
 
-        setTimeout(function () {
-            that.tick();
-        }, delta);
-    };
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
 
-    window.onload = function () {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i = 0; i < elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-    
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function () {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-type');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+  };
+
 </script>
 
 <body>
-    <div class="typewriter">
-        <h1>Krithik Vijayakumar</h1>
-        <h2>
-            <a class="typewrite" data-period="2000"
-                style="color:rgb(255, 255, 255);font-family: monospace;text-decoration:none"
-                data-type='[ "🤵 Entreprenuer", "YouTuber", "Web Developer", "App Developer","Robotics Trainer" ]'>
-                <span class="wrap"></span>
-            </a>
-        </h2>
-        <section class="flex-sect" id="ibze">
-            <div class="container-width">
-              <div class="cards" id="i2zl">
-                <div class="card" id="iorr">
-                  <div id="icr5c" class="card-header">
-                    <a href="https://github.com/krithikV" target="_blank"><img id="i2ma4x" src="https://image.flaticon.com/icons/png/512/25/25231.png"/></a>
-                  </div>
-                  <div id="ixtok" class="card-body">
-                    <div class="card-title" id="i7avp">Github Contributions
-                    </div>
-                    <div class="card-desc" id="ia4et">100+
-                    </div>
-                  </div>
+  <div class="typewriter">
+    <h1>Krithik Vijayakumar</h1>
+    <h2>
+      <a class="typewrite" data-period="2000"
+        style="color:rgb(255, 255, 255);font-family: monospace;text-decoration:none"
+        data-type='[ "🤵 Entreprenuer", "YouTuber", "Web Developer", "App Developer","Robotics Trainer" ]'>
+        <span class="wrap"></span>
+      </a>
+    </h2>
+    <section class="flex-sect" id="ibze">
+      <div class="container-width">
+        <div class="cards" id="i2zl">
+          <div class="card" id="iorr">
+            <div id="icr5c" class="card-header">
+              <a href="https://github.com/krithikV" target="_blank"><img id="i2ma4x"
+                  src="https://image.flaticon.com/icons/png/512/25/25231.png" /></a>
+            </div>
+            <div id="ixtok" class="card-body">
+              <div class="card-title" id="i7avp">Github Contributions
+              </div>
+              <div class="card-desc" id="ia4et">100+
+              </div>
+            </div>
+          </div>
+          <div class="card" id="is0y4p">
+            <div class="card-header" id="i56c37">
+              <a href="https://www.linkedin.com/in/krithikv/" target="_blank"><img
+                  src="https://freepngimg.com/thumb/winner_ribbon/9-2-winner-ribbon-download-png.png" id="imzffj" /></a>
+            </div>
+            <div class="card-body" id="i64b5c">
+              <div class="card-title" id="iuulyv">Awards & Honours
+              </div>
+              <div class="card-desc" id="i9tutu">40+
+              </div>
+            </div>
+          </div>
+          <div class="card" id="icox3f">
+            <div class="card-header" id="i3320h">
+              <a href="https://www.futura-robotics.com/" target="_blank"><img
+                  src="https://firebasestorage.googleapis.com/v0/b/cloud-plus-e08d9.appspot.com/o/unnamed%20(4).png?alt=media&token=605b7719-f75c-4e38-bc82-bd2a0c5a6113"
+                  id="im2feh" /></a>
+            </div>
+            <div class="card-body" id="i0cvem">
+              <div class="card-title" id="iz2zew">Students Trained
+              </div>
+              <div class="card-desc" id="ill109"> 500+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        padding: 10px;
+      }
+
+      .cell {
+        min-height: 75px;
+        flex-grow: 1;
+        flex-basis: 100%;
+      }
+
+      #ifkiq {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        flex-basis: 94.03%;
+      }
+
+      #iuukq {
+        color: black;
+        width: 352px;
+        height: 469px;
+        border-radius: 30px 30px 30px 30px;
+      }
+
+      .tooltip-component__body,
+      [data-tooltip]::after {
+        font-family: Helvetica, sans-serif;
+        background: rgba(55, 61, 73, 0.95);
+        border-radius: 3px;
+        bottom: 100%;
+        color: #fff;
+        content: attr(data-tooltip);
+        display: block;
+        font-size: 12px;
+        left: 50%;
+        line-height: normal;
+        max-width: 32rem;
+        opacity: 0;
+        overflow: hidden;
+        padding: 8px 16px;
+        pointer-events: none;
+        position: absolute;
+        text-overflow: ellipsis;
+        transform: translate(-50%, 0);
+        transition: opacity 0.25s, transform 0.25s;
+        white-space: nowrap;
+        box-sizing: border-box;
+        z-index: 10;
+      }
+
+      [data-tooltip-visible=true]::after,
+      [data-tooltip]:focus::after,
+      [data-tooltip]:hover::after {
+        opacity: 1;
+        transform: translate(-50%, -0.5rem);
+      }
+
+      [data-tooltip-pos=right]::after {
+        bottom: 50%;
+        left: 100%;
+        transform: translate(0, 50%);
+      }
+
+      [data-tooltip-pos=right]:focus::after,
+      [data-tooltip-pos=right]:hover::after,
+      [data-tooltip-visible=true][data-tooltip-pos=right]::after {
+        transform: translate(0.5rem, 50%);
+      }
+
+      [data-tooltip-pos=bottom]::after {
+        bottom: auto;
+        top: 100%;
+        transform: translate(-50%, 0);
+      }
+
+      [data-tooltip-pos=bottom]:focus::after,
+      [data-tooltip-pos=bottom]:hover::after,
+      [data-tooltip-visible=true][data-tooltip-pos=bottom]::after {
+        transform: translate(-50%, 0.5rem);
+      }
+
+      [data-tooltip-pos=left]::after {
+        bottom: 50%;
+        left: auto;
+        right: 100%;
+        transform: translate(0, 50%);
+      }
+
+      [data-tooltip-pos=left]:focus::after,
+      [data-tooltip-pos=left]:hover::after,
+      [data-tooltip-visible=true][data-tooltip-pos=left]::after {
+        transform: translate(-0.5rem, 50%);
+      }
+
+      [data-tooltip-length=small]::after {
+        white-space: normal;
+        width: 80px;
+      }
+
+      [data-tooltip-length=medium]::after {
+        white-space: normal;
+        width: 150px;
+      }
+
+      [data-tooltip-length=large]::after {
+        white-space: normal;
+        width: 300px;
+      }
+
+      [data-tooltip-length=fit]::after {
+        white-space: normal;
+        width: 100%;
+      }
+
+      // IE 11 bugfix
+      button[data-tooltip] {
+        overflow: visible;
+      }
+
+      #icul {
+        padding: 10px;
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        font-family: Helvetica, serif;
+      }
+
+      #ivwx {
+        padding: 10px;
+        font-family: Helvetica, serif;
+        color: #fff;
+        font-size: 17px;
+      }
+
+      @media (max-width: 768px) {
+        .row {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+
+    <div class="row">
+      <div class="cell" id="ifkiq">
+        <img id="iuukq"
+          src="https://firebasestorage.googleapis.com/v0/b/cloud-plus-e08d9.appspot.com/o/WhatsApp%20Image%202021-07-11%20at%206.09.05%20PM.jpeg?alt=media&token=87cef833-cc9d-48ad-acdb-e64ee234ca89" />
+      </div>
+      <div class="cell" id="iyuii">
+        <div id="icul">About Me
+        </div>
+        <div id="ivwx">
+          <span>Hi this is Krithik 15 year old, Studying Grade 11 in KRM Public School. I am the CEO of Futura Robotics.
+            My main aim is to reinvent present technology economically, so everyone can access it. Tillnow I&#039;ve
+            bagged 10 National Awards, 8 State Awards, nominated for 1 International Award and 2 World Records from
+            Kalam World Records, OMG Books of Records and being a part of coding champs from World Books of Records,
+            London. Recently I honoured &quot;Doctor of Letters&quot; in the Specialised area of &quot;Achiever&quot;
+            from Shree Rudraksha University. Being Robotics trainer I am conducting Summer, Winter Camps, Online
+            Webinars and trained more than 500 School and College Students.</span>
+          <br />
+          <br />
+          <span>I am also a Roboteer, Coder, Research and Development specialist, Android App developer, Web Developer,
+            Youtuber and also TEDx Speaker. I was the winner of IIT Madras B-Plan competition conducted by Innolabz
+            Ventures. I was the only school student among more than 500 college students allover India. One of my
+            unmemorable Award was Young Achiever Award from Promising Indian Society, where I was honoured by Former
+            Late President Mr. Pranab Mukherjee Sir.</span>Insert your text here
+        </div>
+      </div>
+    </div>
+    <section>
+      <div style="height:100px"></div>
+      <div id="icul">Gallery
+      </div>
+    </section>
+    <iframe
+      src="https://docs.google.com/presentation/d/e/2PACX-1vSkzc7WNxcSzAwu1LixOoVE_uXnfNqPu7GikzUO16EkCEErNcY2RdXtvU-UFGFj_kMjxbY3xh2T8Teq/embed?start=true&loop=true&delayms=3000"
+      frameborder="10" radius="20" width="70%" height="500" allowfullscreen="true" mozallowfullscreen="true"
+      webkitallowfullscreen="true"></iframe>
+      <section class="flex-sect" id="ibze">
+        <div id="icul">My Creations
+        </div>
+        <div class="container-width">
+          <div class="cards" id="i2zl">
+            <div class="card" id="iorr">
+              <div id="icr5c" class="card-header">
+                <a href="http://futuraconnect.herokuapp.com/" target="_blank"><img id="i2ma4x"
+                    src="https://firebasestorage.googleapis.com/v0/b/cloud-plus-e08d9.appspot.com/o/circle-cropped%20(2).png?alt=media&token=483611ca-dcc3-46f4-80af-74c988a4adb0" /></a>
+              </div>
+              <div id="ixtok" class="card-body">
+                <div class="card-title" id="i7avp">Futura Connect
                 </div>
-                <div class="card" id="is0y4p">
-                  <div class="card-header" id="i56c37">
-                    <a href="https://www.linkedin.com/in/krithikv/" target="_blank"><img src="https://freepngimg.com/thumb/winner_ribbon/9-2-winner-ribbon-download-png.png" id="imzffj"/></a>
-                  </div>
-                  <div class="card-body" id="i64b5c">
-                    <div class="card-title" id="iuulyv">Awards & Honours
-                    </div>
-                    <div class="card-desc" id="i9tutu">40+
-                    </div>
-                  </div>
-                </div>
-                <div class="card" id="icox3f">
-                  <div class="card-header" id="i3320h">
-                    <a href="https://www.futura-robotics.com/" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/cloud-plus-e08d9.appspot.com/o/unnamed%20(4).png?alt=media&token=605b7719-f75c-4e38-bc82-bd2a0c5a6113" id="im2feh"/></a>
-                  </div>
-                  <div class="card-body" id="i0cvem">
-                    <div class="card-title" id="iz2zew">Students Trained
-                    </div>
-                    <div class="card-desc" id="ill109"> 500+
-                    </div>
-                  </div>
+                <div class="card-desc" id="ia4et"><a href="http://futuraconnect.herokuapp.com/" target="_blank"><button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Open</button></a>
                 </div>
               </div>
             </div>
-          </section>
-         <style>
-             .row{
-  display:flex;
-  justify-content:flex-start;
-  align-items:stretch;
-  flex-wrap:nowrap;
-  padding:10px;
-}
-.cell{
-  min-height:75px;
-  flex-grow:1;
-  flex-basis:100%;
-}
-#ifkiq{
-  flex-direction:row;
-  display:flex;
-  justify-content:center;
-  flex-basis:94.03%;
-}
-#iuukq{
-  color:black;
-  width:352px;
-  height:469px;
-  border-radius:30px 30px 30px 30px;
-}
-.tooltip-component__body, [data-tooltip]::after{
-  font-family:Helvetica, sans-serif;
-  background:rgba(55, 61, 73, 0.95);
-  border-radius:3px;
-  bottom:100%;
-  color:#fff;
-  content:attr(data-tooltip);
-  display:block;
-  font-size:12px;
-  left:50%;
-  line-height:normal;
-  max-width:32rem;
-  opacity:0;
-  overflow:hidden;
-  padding:8px 16px;
-  pointer-events:none;
-  position:absolute;
-  text-overflow:ellipsis;
-  transform:translate(-50%, 0);
-  transition:opacity 0.25s, transform 0.25s;
-  white-space:nowrap;
-  box-sizing:border-box;
-  z-index:10;
-}
-[data-tooltip-visible=true]::after, [data-tooltip]:focus::after, [data-tooltip]:hover::after{
-  opacity:1;
-  transform:translate(-50%, -0.5rem);
-}
-[data-tooltip-pos=right]::after{
-  bottom:50%;
-  left:100%;
-  transform:translate(0, 50%);
-}
-[data-tooltip-pos=right]:focus::after, [data-tooltip-pos=right]:hover::after, [data-tooltip-visible=true][data-tooltip-pos=right]::after{
-  transform:translate(0.5rem, 50%);
-}
-[data-tooltip-pos=bottom]::after{
-  bottom:auto;
-  top:100%;
-  transform:translate(-50%, 0);
-}
-[data-tooltip-pos=bottom]:focus::after, [data-tooltip-pos=bottom]:hover::after, [data-tooltip-visible=true][data-tooltip-pos=bottom]::after{
-  transform:translate(-50%, 0.5rem);
-}
-[data-tooltip-pos=left]::after{
-  bottom:50%;
-  left:auto;
-  right:100%;
-  transform:translate(0, 50%);
-}
-[data-tooltip-pos=left]:focus::after, [data-tooltip-pos=left]:hover::after, [data-tooltip-visible=true][data-tooltip-pos=left]::after{
-  transform:translate(-0.5rem, 50%);
-}
-[data-tooltip-length=small]::after{
-  white-space:normal;
-  width:80px;
-}
-[data-tooltip-length=medium]::after{
-  white-space:normal;
-  width:150px;
-}
-[data-tooltip-length=large]::after{
-  white-space:normal;
-  width:300px;
-}
-[data-tooltip-length=fit]::after{
-  white-space:normal;
-  width:100%;
-}
-// IE 11 bugfix
-button[data-tooltip]{
-  overflow:visible;
-}
-#icul{
-  padding:10px;
-  font-size:40px;
-  color: #fff;
-  text-align:center;
-  font-family: Helvetica, serif;
-}
-#ivwx{
-  padding:10px;
-  font-family: Helvetica, serif;
-  color: #fff;
-  font-size:17px;
-}
-@media (max-width: 768px){
-  .row{
-    flex-wrap:wrap;
-  }
-}
+            <div class="card" id="is0y4p">
+              <div class="card-header" id="i56c37">
+                <a href="https://krithik2005.pythonanywhere.com/" target="_blank"><img
+                    src="https://firebasestorage.googleapis.com/v0/b/cloud-plus-e08d9.appspot.com/o/circle-cropped%20(3).png?alt=media&token=eb6c830a-68e2-439b-849e-9d0bfcf4a0e5" id="imzffj" /></a>
+              </div>
+              <div class="card-body" id="i64b5c">
+                <div class="card-title" id="iuulyv">Slum Funding Calculator
+                </div>
+                <div class="card-desc" id="i9tutu"><a href="https://krithik2005.pythonanywhere.com/" target="_blank"><button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Open</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="icox3f">
+              <div class="card-header" id="i3320h">
+                <a href="https://play.google.com/store/apps/details?id=com.krithik.green" target="_blank"><img
+                    src="https://play-lh.googleusercontent.com/reSmUHRTkOKSU-imzdNxRu3XcWNo_wPBlIw5LjvfF6Nbp0gcemk8oV_U7W2sW5YeuO8=s180-rw"
+                    id="im2feh" /></a>
+              </div>
+              <div class="card-body" id="i0cvem">
+                <div class="card-title" id="iz2zew">Green
+                </div>
+                <div class="card-desc" id="ill109"><a href="https://play.google.com/store/apps/details?id=com.krithik.green" target="_blank"><button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Open</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="icox3f">
+              <div class="card-header" id="i3320h">
+                <a href="https://play.google.com/store/apps/details?id=com.krithik.mixchat" target="_blank"><img
+                    src="https://play-lh.googleusercontent.com/yMGlkz30piCnc_dKOgOWgcTctlA1oyxToIBOoa_1vK31-9X3BVi1WnB7KqlN9DqencHp=s180-rw"
+                    id="im2feh" /></a>
+              </div>
+              <div class="card-body" id="i0cvem">
+                <div class="card-title" id="iz2zew">Mix Chat
+                </div>
+                <div class="card-desc" id="ill109"><a href="https://play.google.com/store/apps/details?id=com.krithik.mixchat" target="_blank"><button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Open</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="icox3f">
+              <div class="card-header" id="i3320h">
+                <a href="https://sourceforge.net/projects/transparentnotes/" target="_blank"><img
+                    src="https://a.fsdn.com/allura/p/transparentnotes/icon?7972457d0c5d66ab5287c8f26adadddf59b4a98b7be2cf9b35ecdf2a97cb46a1?&w=135"
+                    id="im2feh" /></a>
+              </div>
+              <div class="card-body" id="i0cvem">
+                <div class="card-title" id="iz2zew">Transparent Notes
+                </div>
+                <div class="card-desc" id="ill109"><a href="https://sourceforge.net/projects/transparentnotes/" target="_blank"><button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Open</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="icox3f">
+              <div class="card-header" id="i3320h">
+                <a href="https://sourceforge.net/projects/bulkemailutility/" target="_blank"><img
+                    src="https://a.fsdn.com/allura/p/bulkemailutility/icon?6d8081a0e61527e7e2b08318cc50acdaa94a8dc4a17cbf7175f15e37dcdf8e7d?&w=135"
+                    id="im2feh" /></a>
+              </div>
+              <div class="card-body" id="i0cvem">
+                <div class="card-title" id="iz2zew">Bulk Email Utility
+                </div>
+                <div class="card-desc" id="ill109"><a href="https://sourceforge.net/projects/bulkemailutility/" target="_blank"><button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Open</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <style>
+      .tooltip-component__body,
+      [data-tooltip]::after {
+        font-family: Helvetica, sans-serif;
+        background: rgba(55, 61, 73, 0.95);
+        border-radius: 3px;
+        bottom: 100%;
+        color: #fff;
+        content: attr(data-tooltip);
+        display: block;
+        font-size: 12px;
+        left: 50%;
+        line-height: normal;
+        max-width: 32rem;
+        opacity: 0;
+        overflow: hidden;
+        padding: 8px 16px;
+        pointer-events: none;
+        position: absolute;
+        text-overflow: ellipsis;
+        transform: translate(-50%, 0);
+        transition: opacity 0.25s, transform 0.25s;
+        white-space: nowrap;
+        box-sizing: border-box;
+        z-index: 10;
+      }
 
-         </style>
-<div class="row">
-    <div class="cell" id="ifkiq">
-      <img id="iuukq" src="https://firebasestorage.googleapis.com/v0/b/cloud-plus-e08d9.appspot.com/o/WhatsApp%20Image%202021-07-11%20at%206.09.05%20PM.jpeg?alt=media&token=87cef833-cc9d-48ad-acdb-e64ee234ca89"/>
-    </div>
-    <div class="cell" id="iyuii">
-      <div id="icul">About Me
-      </div>
-      <div id="ivwx">
-        <span>Hi this is Krithik 15 year old, Studying Grade 11 in KRM Public School. I am the CEO of Futura Robotics. My main aim is to reinvent present technology economically, so everyone can access it. Tillnow I&#039;ve bagged 10 National Awards, 8 State Awards, nominated for 1 International Award and 2 World Records from Kalam World Records, OMG Books of Records and being a part of coding champs from World Books of Records, London. Recently I honoured &quot;Doctor of Letters&quot; in the Specialised area of &quot;Achiever&quot; from Shree Rudraksha University. Being Robotics trainer I am conducting Summer, Winter Camps, Online Webinars and trained more than 500 School and College Students.</span>
-        <br/>
-        <br/>
-        <span>I am also a Roboteer, Coder, Research and Development specialist, Android App developer, Web Developer, Youtuber and also TEDx Speaker. I was the winner of IIT Madras B-Plan competition conducted by Innolabz Ventures. I was the only school student among more than 500 college students allover India. One of my unmemorable Award was Young Achiever Award from Promising Indian Society, where I was honoured by Former Late President Mr. Pranab Mukherjee Sir.</span>Insert your text here
-      </div>
-    </div>
-  </div>
-  
-<style>
-.tooltip-component__body, [data-tooltip]::after{
-  font-family:Helvetica, sans-serif;
-  background:rgba(55, 61, 73, 0.95);
-  border-radius:3px;
-  bottom:100%;
-  color:#fff;
-  content:attr(data-tooltip);
-  display:block;
-  font-size:12px;
-  left:50%;
-  line-height:normal;
-  max-width:32rem;
-  opacity:0;
-  overflow:hidden;
-  padding:8px 16px;
-  pointer-events:none;
-  position:absolute;
-  text-overflow:ellipsis;
-  transform:translate(-50%, 0);
-  transition:opacity 0.25s, transform 0.25s;
-  white-space:nowrap;
-  box-sizing:border-box;
-  z-index:10;
-}
-[data-tooltip-visible=true]::after, [data-tooltip]:focus::after, [data-tooltip]:hover::after{
-  opacity:1;
-  transform:translate(-50%, -0.5rem);
-}
-[data-tooltip-pos=right]::after{
-  bottom:50%;
-  left:100%;
-  transform:translate(0, 50%);
-}
-[data-tooltip-pos=right]:focus::after, [data-tooltip-pos=right]:hover::after, [data-tooltip-visible=true][data-tooltip-pos=right]::after{
-  transform:translate(0.5rem, 50%);
-}
-[data-tooltip-pos=bottom]::after{
-  bottom:auto;
-  top:100%;
-  transform:translate(-50%, 0);
-}
-[data-tooltip-pos=bottom]:focus::after, [data-tooltip-pos=bottom]:hover::after, [data-tooltip-visible=true][data-tooltip-pos=bottom]::after{
-  transform:translate(-50%, 0.5rem);
-}
-[data-tooltip-pos=left]::after{
-  bottom:50%;
-  left:auto;
-  right:100%;
-  transform:translate(0, 50%);
-}
-[data-tooltip-pos=left]:focus::after, [data-tooltip-pos=left]:hover::after, [data-tooltip-visible=true][data-tooltip-pos=left]::after{
-  transform:translate(-0.5rem, 50%);
-}
-[data-tooltip-length=small]::after{
-  white-space:normal;
-  width:80px;
-}
-[data-tooltip-length=medium]::after{
-  white-space:normal;
-  width:150px;
-}
-[data-tooltip-length=large]::after{
-  white-space:normal;
-  width:300px;
-}
-[data-tooltip-length=fit]::after{
-  white-space:normal;
-  width:100%;
-}
-// IE 11 bugfix
-button[data-tooltip]{
-  overflow:visible;
-}
-#i7ag{
-  position:relative;
-  width:980px;
-  margin:0 auto;
-}
-#iepa{
-  width:880px;
-  margin:0 auto;
-  position:relative;
-  overflow:hidden;
-  white-space:nowrap;
-}
-#icxh{
-  display:inline-block;
-  transition-delay:1ms;
-}
-#ijfi{
-  position:absolute;
-  display:block;
-  cursor:pointer;
-  top:50%;
-  left:0;
-  margin-top:-25px;
-}
-#idr99{
-  position:absolute;
-  display:block;
-  cursor:pointer;
-  top:50%;
-  right:0;
-  margin-top:-25px;
-}
-#ivqh{
-  font-size:20px;
-  text-decoration: none;
-  color:white;
-  font-family:Helvetica, sans-serif;
-}
+      [data-tooltip-visible=true]::after,
+      [data-tooltip]:focus::after,
+      [data-tooltip]:hover::after {
+        opacity: 1;
+        transform: translate(-50%, -0.5rem);
+      }
 
-</style>
-<section><div style="width:50px"></div></section>
-<section>
-<div id="i7ag">
-  <div id="iepa" class="gjs-lory-frame">
-    <div id="icxh" class="gjs-lory-slides">
-    </div>
-  </div>
-  <span id="ijfi" class="gjs-lory-prev"></span>
-  <span id="idr99" class="gjs-lory-next"></span>
-</div>
-<section id="iy7m" class="bdg-sect">
-  <h3 id="icul" class="heading">Contact Me
-  </h1>
-  <p id="ivqh" class="paragraph">
-    <div id="ivqh" class="paragraph">Email: <a href="mailto:krithikvijayakumar11@gmail.com" style="text-decoration: none; color:white;" target="_blank"> krithikvijayakumar11@gmail.com </a>
-    </div>
-    <div id="ivqh" class="paragraph">Phone:<a href="tel:+917604919421" style="text-decoration: none; color:white;" target="_blank"> +91 7604919421</a>
-  </div>
-  <div id="ivqh" class="paragraph">Linkedin: <a href="https://www.linkedin.com/in/krithikv/" style="text-decoration: none; color:white;" target="_blank"> https://www.linkedin.com/in/krithikv/</a>
-  </div>
-  <div id="ivqh" class="paragraph">Facebook: <a href="https://www.facebook.com/krithik.vijayakumar.1" style="text-decoration: none; color:white;" target="_blank"> https://www.facebook.com/krithik.vijayakumar.1</a>
-  </div>
-  <div id="ivqh" class="paragraph">Instagram:<a href=" https://www.instagram.com/krithik_2005/" style="text-decoration: none; color:white;" target="_blank"> https://www.instagram.com/krithik_2005/</a>
-  </div>
-  </p>
-</section>
-<script>var items = document.querySelectorAll('#i7ag');
-  for (var i = 0, len = items.length; i < len; i++) {
-    (function(){
-      var e=this,t="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.3.4/lory.min.js",l=["0","false"],s="";
-      s="true"==s?1:parseInt(s,10);
-      var a={
-        slidesToScroll:parseInt("1",10),enableMouseEvents:l.indexOf("")>=0?0:1,infinite:!isNaN(s)&&s,rewind:!(l.indexOf("")>=0),slideSpeed:parseInt("300",10),rewindSpeed:parseInt("600",10),snapBackSpeed:parseInt("200",10),ease:"ease",classNameFrame:"gjs-lory-frame",classNameSlideContainer:"gjs-lory-slides",classNamePrevCtrl:"gjs-lory-prev",classNameNextCtrl:"gjs-lory-next"}
-      ,r=function(){
-        window.sliderLory=lory(e,a)};
-      if("undefined"==typeof lory){
-        var n=document.createElement("script");
-        n.src=t,n.onload=r,document.head.appendChild(n)}
-      else r()
-    }
-     .bind(items[i]))();
-  }
-</script>
-</section>
+      [data-tooltip-pos=right]::after {
+        bottom: 50%;
+        left: 100%;
+        transform: translate(0, 50%);
+      }
+
+      [data-tooltip-pos=right]:focus::after,
+      [data-tooltip-pos=right]:hover::after,
+      [data-tooltip-visible=true][data-tooltip-pos=right]::after {
+        transform: translate(0.5rem, 50%);
+      }
+
+      [data-tooltip-pos=bottom]::after {
+        bottom: auto;
+        top: 100%;
+        transform: translate(-50%, 0);
+      }
+
+      [data-tooltip-pos=bottom]:focus::after,
+      [data-tooltip-pos=bottom]:hover::after,
+      [data-tooltip-visible=true][data-tooltip-pos=bottom]::after {
+        transform: translate(-50%, 0.5rem);
+      }
+
+      [data-tooltip-pos=left]::after {
+        bottom: 50%;
+        left: auto;
+        right: 100%;
+        transform: translate(0, 50%);
+      }
+
+      [data-tooltip-pos=left]:focus::after,
+      [data-tooltip-pos=left]:hover::after,
+      [data-tooltip-visible=true][data-tooltip-pos=left]::after {
+        transform: translate(-0.5rem, 50%);
+      }
+
+      [data-tooltip-length=small]::after {
+        white-space: normal;
+        width: 80px;
+      }
+
+      [data-tooltip-length=medium]::after {
+        white-space: normal;
+        width: 150px;
+      }
+
+      [data-tooltip-length=large]::after {
+        white-space: normal;
+        width: 300px;
+      }
+
+      [data-tooltip-length=fit]::after {
+        white-space: normal;
+        width: 100%;
+      }
+
+      // IE 11 bugfix
+      button[data-tooltip] {
+        overflow: visible;
+      }
+
+      #i7ag {
+        position: relative;
+        width: 980px;
+        margin: 0 auto;
+      }
+
+      #iepa {
+        width: 880px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      #icxh {
+        display: inline-block;
+        transition-delay: 1ms;
+      }
+
+      #ijfi {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 50%;
+        left: 0;
+        margin-top: -25px;
+      }
+
+      #idr99 {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 50%;
+        right: 0;
+        margin-top: -25px;
+      }
+
+      #ivqh {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        font-family: Helvetica, sans-serif;
+      }
+    </style>
+    <section>
+      <div style="width:50px"></div>
+    </section>
+    <section>
+      <div id="i7ag">
+        <div id="iepa" class="gjs-lory-frame">
+          <div id="icxh" class="gjs-lory-slides">
+          </div>
+        </div>
+        <span id="ijfi" class="gjs-lory-prev"></span>
+        <span id="idr99" class="gjs-lory-next"></span>
+      </div>
+      <section id="iy7m" class="bdg-sect">
+        <div>
+          <h3 id="icul" class="heading">Contact Me
+            </h1>
+            <p id="ivqh" class="paragraph">
+            <div id="ivqh" class="paragraph">Email: <a href="mailto:krithikvijayakumar11@gmail.com"
+                style="text-decoration: none; color:white;" target="_blank"> krithikvijayakumar11@gmail.com </a>
+            </div>
+            <div id="ivqh" class="paragraph">Phone:<a href="tel:+917604919421"
+                style="text-decoration: none; color:white;" target="_blank"> +91 7604919421</a>
+            </div>
+            <div id="ivqh" class="paragraph">Linkedin: <a href="https://www.linkedin.com/in/krithikv/"
+                style="text-decoration: none; color:white;" target="_blank"> https://www.linkedin.com/in/krithikv/</a>
+            </div>
+            <div id="ivqh" class="paragraph">Facebook: <a href="https://www.facebook.com/krithik.vijayakumar.1"
+                style="text-decoration: none; color:white;"
+                target="_blank"> https://www.facebook.com/krithik.vijayakumar.1</a>
+            </div>
+            <div id="ivqh" class="paragraph">Instagram:<a href=" https://www.instagram.com/krithik_2005/"
+                style="text-decoration: none; color:white;" target="_blank"> https://www.instagram.com/krithik_2005/</a>
+            </div>
+            </p>
+        </div>
+      </section>
+      <script>var items = document.querySelectorAll('#i7ag');
+        for (var i = 0, len = items.length; i < len; i++) {
+          (function () {
+            var e = this, t = "https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.3.4/lory.min.js", l = ["0", "false"], s = "";
+            s = "true" == s ? 1 : parseInt(s, 10);
+            var a = {
+              slidesToScroll: parseInt("1", 10), enableMouseEvents: l.indexOf("") >= 0 ? 0 : 1, infinite: !isNaN(s) && s, rewind: !(l.indexOf("") >= 0), slideSpeed: parseInt("300", 10), rewindSpeed: parseInt("600", 10), snapBackSpeed: parseInt("200", 10), ease: "ease", classNameFrame: "gjs-lory-frame", classNameSlideContainer: "gjs-lory-slides", classNamePrevCtrl: "gjs-lory-prev", classNameNextCtrl: "gjs-lory-next"
+            }
+              , r = function () {
+                window.sliderLory = lory(e, a)
+              };
+            if ("undefined" == typeof lory) {
+              var n = document.createElement("script");
+              n.src = t, n.onload = r, document.head.appendChild(n)
+            }
+            else r()
+          }
+            .bind(items[i]))();
+        }
+      </script>
+    </section>
+    
 </body>
+
+<footer>
+  <div style="height: 200px;"></div>
+  <div id="iarhh" class="row">
+    <div class="cell">
+      <section id="iuuc" class="bdg-sect">
+        <h1 id="icul" class="heading">Donate Me
+        </h1>
+        <p id="i39j" style="color:#fff;font-size:25px" class="paragraph">I have been working on projects that change the
+          world. Today we have a lot of things which many people are unable to access. I have been working on such
+          products which reaches to almost everyone in the world
+        </p>
+      </section>
+    </div>
+    <div style="width:300px">
+    </div>
+    <div class="cell" id="ib36j">
+      <div id="ih01">
+        <div id="smart-button-container">
+          <div style="text-align: center"><label style="color:white;font-family: Helvetica, serif;"
+              for="description">Description </label><input type="text" name="descriptionInput" id="description"
+              maxlength="127" value=""></div>
+          <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description
+          </p>
+          <div style="text-align: center"><label style="color:white;font-family: Helvetica, serif;" for="amount">Amount
+            </label><input name="amountInput" type="number" id="amount" value=""><span
+              style="color:white;font-family: Helvetica, serif;">USD</span></div>
+          <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+          <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input
+              name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
+          <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID
+          </p>
+          <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+        </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
+          data-sdk-integration-source="button-factory"></script>
+        <script>
+          function initPayPalButton() {
+            var description = document.querySelector('#smart-button-container #description');
+            var amount = document.querySelector('#smart-button-container #amount');
+            var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+            var priceError = document.querySelector('#smart-button-container #priceLabelError');
+            var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+            var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+            var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+
+            var elArr = [description, amount];
+
+            if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+              invoiceidDiv.style.display = "block";
+            }
+
+            var purchase_units = [];
+            purchase_units[0] = {};
+            purchase_units[0].amount = {};
+
+            function validate(event) {
+              return event.value.length > 0;
+            }
+
+            paypal.Buttons({
+              style: {
+                color: 'gold',
+                shape: 'rect',
+                label: 'paypal',
+                layout: 'vertical',
+
+              },
+
+              onInit: function (data, actions) {
+                actions.disable();
+
+                if (invoiceidDiv.style.display === "block") {
+                  elArr.push(invoiceid);
+                }
+
+                elArr.forEach(function (item) {
+                  item.addEventListener('keyup', function (event) {
+                    var result = elArr.every(validate);
+                    if (result) {
+                      actions.enable();
+                    } else {
+                      actions.disable();
+                    }
+                  });
+                });
+              },
+
+              onClick: function () {
+                if (description.value.length < 1) {
+                  descriptionError.style.visibility = "visible";
+                } else {
+                  descriptionError.style.visibility = "hidden";
+                }
+
+                if (amount.value.length < 1) {
+                  priceError.style.visibility = "visible";
+                } else {
+                  priceError.style.visibility = "hidden";
+                }
+
+                if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+                  invoiceidError.style.visibility = "visible";
+                } else {
+                  invoiceidError.style.visibility = "hidden";
+                }
+
+                purchase_units[0].description = description.value;
+                purchase_units[0].amount.value = amount.value;
+
+                if (invoiceid.value !== '') {
+                  purchase_units[0].invoice_id = invoiceid.value;
+                }
+              },
+
+              createOrder: function (data, actions) {
+                return actions.order.create({
+                  purchase_units: purchase_units,
+                });
+              },
+
+              onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                  alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+              },
+
+              onError: function (err) {
+                console.log(err);
+              }
+            }).render('#paypal-button-container');
+          }
+          initPayPalButton();
+        </script>
+      </div>
+      <div style="width:300px">
+      </div>
+    </div>
+  </div>
+  </div>
+</footer>
 
 </html>
